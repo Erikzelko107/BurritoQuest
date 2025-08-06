@@ -1,7 +1,7 @@
 body {
   font-family: 'Comic Sans MS', cursive;
-  text-align: center;
   background-color: #ffeaa7;
+  text-align: center;
 }
 
 #game-container {
@@ -23,4 +23,15 @@ body {
   border: 2px dashed #d63031;
   font-size: 18px;
   display: none;
+}
+
+#dpad {
+  margin-top: 10px;
+}
+
+#dpad button {
+  font-size: 24px;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
