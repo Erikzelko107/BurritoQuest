@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Burrito Quest: Escape from El Surreal</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Burrito Quest: Escape from El Surreal 🌮</h1>
   <div id="game-container">
     <canvas id="gameCanvas" width="800" height="400"></canvas>
     <div id="messageBox"></div>
+    <div id="healthBarContainer">
+      <div id="playerHealth"></div>
+    </div>
 
     <div id="dpad">
-      <button onclick="move('up')">⬆️</button><br>
-      <button onclick="move('left')">⬅️</button>
-      <button onclick="move('down')">⬇️</button>
-      <button onclick="move('right')">➡️</button>
+      <button id="upBtn">⬆️</button><br />
+      <button id="leftBtn">⬅️</button>
+      <button id="downBtn">⬇️</button>
+      <button id="rightBtn">➡️</button>
+      <button id="attackBtn">👊 Attack</button>
     </div>
   </div>
+
   <script src="game.js"></script>
 </body>
 </html>
