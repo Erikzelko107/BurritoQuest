@@ -1,37 +1,111 @@
+/* Basic styling */
 body {
   font-family: 'Comic Sans MS', cursive;
   background-color: #ffeaa7;
   text-align: center;
+  margin: 0;
+  padding: 10px;
+  -webkit-user-select: none; /* Disable text selection for mobile */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #game-container {
   position: relative;
   display: inline-block;
+  max-width: 100vw;
 }
 
 #gameCanvas {
   background: linear-gradient(to top, #fdcb6e 50%, #74b9ff 50%);
   border: 4px solid #2d3436;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
 }
 
 #messageBox {
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 10px;
   border: 2px dashed #d63031;
   font-size: 18px;
   display: none;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+#healthBarContainer {
+  width: 300px;
+  height: 25px;
+  border: 3px solid #2d3436;
+  margin: 10px auto;
+  background: #dfe6e9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#playerHealth {
+  height: 100%;
+  width: 100%;
+  background: #00b894;
+  transition: width 0.3s ease;
 }
 
 #dpad {
-  margin-top: 10px;
+  margin-top: 15px;
+  user-select: none;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #dpad button {
-  font-size: 24px;
+  font-size: 26px;
   margin: 5px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   cursor: pointer;
+  border: none;
+  background: #fdcb6e;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px #b2bec3;
+  transition: background 0.2s;
+  user-select: none;
+  width: 70px;
+}
+
+#dpad button:active {
+  background: #e17055;
+  color: white;
+}
+
+/* Arrange D-pad nicely */
+#dpad button#upBtn {
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+#dpad button#leftBtn,
+#dpad button#downBtn,
+#dpad button#rightBtn,
+#dpad button#attackBtn {
+  display: inline-block;
+}
+
+#dpad button#attackBtn {
+  background: #d63031;
+  color: white;
+  width: 150px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+#dpad button#attackBtn:active {
+  background: #b71818;
 }
